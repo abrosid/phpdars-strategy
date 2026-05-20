@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace App\Domain\Strategy;
+namespace App\Domain\BillingCalculator\Strategy;
 
 use DateTimeImmutable;
 
-class YearlyBilling implements BillingPeriodInterface
+class QuarterlyBilling implements BillingPeriodInterface
 {
     public function calculateNextDate(DateTimeImmutable $signupDate): DateTimeImmutable
     {
-        return $signupDate->modify('+1 year');
+        return $signupDate->modify('+3 months');
     }
 }

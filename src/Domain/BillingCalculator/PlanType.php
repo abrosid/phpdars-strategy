@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Domain;
+namespace App\Domain\BillingCalculator;
 
 enum PlanType: string
 {
@@ -10,4 +10,5 @@ enum PlanType: string
     case QUARTERLY = 'quarterly';
     case HALF_YEARLY = 'half-yearly';
     case YEARLY = 'yearly';
+    case UNKNOWN = 'unknown';
 }

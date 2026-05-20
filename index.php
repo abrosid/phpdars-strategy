@@ -2,9 +2,9 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-use App\Domain\PlanType;
-use App\Domain\CalculatorTypeRegistry;
-use App\Domain\BillingCalculatorService;
+use App\Domain\BillingCalculator\BillingCalculatorService;
+use App\Domain\BillingCalculator\CalculatorTypeRegistry;
+use App\Domain\BillingCalculator\PlanType;
 
 $calculator = new CalculatorTypeRegistry();
 $billingCalculator = new BillingCalculatorService($calculator);
