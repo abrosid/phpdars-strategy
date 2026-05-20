@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    image: php-app
+    container_name: php-app
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - "9000:9000"
